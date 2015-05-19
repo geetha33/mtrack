@@ -1,0 +1,85 @@
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no minimal-ui">
+    <header>
+  	  <ul>
+  		<li>
+  			<div class ="title">Make Transaction</div>
+  		</li>
+       </ul>
+    </header>
+	<div class="main">
+	<form class="save">
+		<p>Required</p>
+		
+		<fieldset>
+			<label for="amount" class="amount1">Amount:</label>
+			{{input type="number" class="amount" placeholder="+$10"}}
+		</fieldset>
+		
+		<p>Optional</p>
+		
+		<fieldset>
+			<label for="mode of payment">Payment Method:</label>
+			
+	        {{view Ember.Select
+	          content=paymentByOptions
+	           optionValuePath="content.value"
+	           optionLabelPath="content.label"
+	           id="mode of payment"}}
+			
+		 </fieldset>
+			
+		 <fieldset>
+			<label for="money spent on">Money Spent On:</label>
+			
+	        {{view Ember.Select
+	          content=moneySpentByOptions
+	          optionValuePath="content.value"
+	          optionLabelPath="content.label"
+	          id="money spent on"}}
+			
+		 </fieldset>
+			
+			
+		  <fieldset>
+		  
+			<label for="money credited Type" class="credited-type"> Credited Type:</label>
+	        {{view Ember.Select
+	          content=moneyCreditedByOptions
+	          optionValuePath="content.value"
+	          optionLabelPath="content.label"
+	          id="money credited Type"}}
+			
+		  </fieldset>
+			
+			
+			
+			<fieldset>
+			<label for="location" class="location-1">Address:</label>
+			{{input  class="location" list="location" placeholder="2227 Elcamino,Santa clara, CA, 94501"}}
+		    </fieldset>
+			
+			<fieldset>
+			<label for="Date" class="date-1">Date:</label>
+			{{input  class="Date" placeholder="YYYY-MM-DD"}}
+		    </fieldset>
+			
+			
+			
+			<fieldset>
+			<label for="Time" class="time-1">Time:</label>
+			{{input class="Time" placeholder="HH:MM:SS"}}
+		    </fieldset>
+				
+			<fieldset >
+		
+			{{#link-to 'transaction'}}<h3 {{action 'save'}}>Save Transaction</h3>{{/link-to}}
+		    </fieldset>
+				
+			</form>
+	</div>	
+	
+	
+    	
+
+ 

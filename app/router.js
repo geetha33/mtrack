@@ -6,6 +6,13 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+	this.route('transactiondetails');
+	
+	this.route('calendar');
+	this.route('list');
+	this.route('map');
+	this.route('scanner');
+	this.route('transaction',{path:'/'});
 });
 
 export default Router;

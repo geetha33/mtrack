@@ -1,3 +1,25 @@
-<h2 id="title">Welcome to Ember.js</h2>
 
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no minimal-ui">
 {{outlet}}
+
+
+<footer>
+<ul>
+<li>
+{{#link-to  'transaction' }} <span><img src="/transaction.png"/></span><br/>Transaction{{/link-to}}
+</li>
+<li>
+{{#link-to  'list'}} <span><img src="/list.png"/></span><br/>List{{/link-to}}
+</li>
+<li>
+{{#link-to  'map' }}  <span><img src="/map.png"/></span><br/>Map{{/link-to}}
+</li>
+<li>
+{{#link-to  'calendar' }}  <span><img src="/calendar.png"/></span><br/>Calendar{{/link-to}}
+</li>
+<li>
+{{#link-to  'scanner'}} <span><img src="/scanner.png"/></span><br/>Scanner{{/link-to}}
+</li>
+</ul>
+</footer>	
+

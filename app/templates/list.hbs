@@ -1,0 +1,35 @@
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no minimal-ui">
+	  <header>
+		  <ul >
+			<li>
+				<div class ="title">List Transactions</div>
+			</li>
+	     </ul>
+	  </header>
+    <div class="transaction-list">
+	<ul>
+	 {{#each temp in data}}
+        <li class="list">
+        
+            <ul>
+			
+             <li>
+                <div class="amount">{{temp.amount}}</div>
+			    
+            
+            <li>
+			   <div class="date">{{temp.date}}</div>
+            
+              
+			   <div class="time">{{temp.time}}</div>
+             </li> 
+             
+			  </li>
+            </ul>
+			
+        </li>
+	 {{/each}}
+      </ul>
+    </div>
+
+ 
